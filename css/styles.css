@@ -1,0 +1,728 @@
+/* font-family: 'Amiri', serif;
+font-family: 'Cormorant', serif;
+font-family: 'Montserrat', sans-serif; */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(0, 0, 0);
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/** menu de navegacion **/
+
+.header{
+    background: rgba(255, 255, 255, 0);
+    width: 100%;
+}
+
+.header .nav{
+    font-family: 'Amiri', serif;
+    font-size: 20px;
+    position:absolute;
+    width: 100%;
+    padding: 1.2em 2em;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "logo list list boton";
+    
+    z-index:9999;
+}
+
+.header .nav .logo{
+    grid-area: logo;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.header .nav .logo .btn-menu{display: none;}
+
+.header .nav .list{
+    grid-area: list;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .nav .list ul{display: flex;list-style: none;}
+.header .nav .list ul .active{border-bottom: solid 1px #fff;}
+.header .nav .list a{text-decoration: none; color: #fff; margin: 0 1em;}
+.header .nav .list a:hover{border-bottom: solid 1px #fff;}
+
+.header .nav .boton{
+    grid-area: boton;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header .nav .boton a{
+    border: solid 1px #fff;
+    padding: 0.4em 2em;
+    text-decoration: none;
+    color: #fff;
+}
+.header .nav .boton a:hover{
+    background: #fff;
+    color: #777;
+    transition: 500ms;
+}
+
+.header .img-header{
+    background: url(../img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.1);
+    background-blend-mode: soft-light;
+
+    position: relative;
+    width: 100%;
+    height:80vh;
+}
+
+.header .img-header .contenedor{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header .img-header .contenedor .subtitulo{
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: -1em;
+}
+
+.header .img-header .contenedor .titulo{
+    font-family: 'Amiri', serif;
+    font-size: 6em;
+}
+
+.header .img-header .contenedor .boton a{
+    font-family: 'Cormorant', serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    border: solid 1px #fff;
+    padding: 0.7em 1.5em;
+}
+.header .img-header .contenedor .boton a:hover{background: #fff;color:#555;transition: 500ms;}
+
+/******** tabla de reservacion ************/
+
+.reserva{
+    width: 100%;
+    padding: 6em 8em;
+}
+
+.reserva .form-reserva{
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "personas fecha hora reservar";
+}
+
+.reserva .form-reserva .icon{
+    background: #000;
+    border: solid 1px #aaa;
+    padding: 1em 1.5em;
+}
+.reserva .form-reserva .icon .personas{
+    margin-left: 1em;
+    grid-area: personas;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.reserva .form-reserva .icon .fecha{
+    margin-left: 1em;
+    grid-area: personas;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.reserva .form-reserva .icon .hora{
+    margin-left: 1em;
+    grid-area: personas;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.reserva .form-reserva .reservar{
+    font-family: 'Amiri', serif;
+    font-size: 1.2em;
+    background: #000;
+    color: #fff;
+    border: solid 2px #fff;
+}
+.reserva .form-reserva .reservar:hover{background: #fff;color:#555;transition: 500ms;}
+
+
+/**** sesion 1 ******/
+
+.sesion1{
+    width: 100%;
+    padding-bottom: 10em;
+}
+
+.sesion1 .contenedor{
+    padding: 2em 6em;
+    text-align: center;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "cuadro1 cuadro2 cuadro3";
+}
+
+.sesion1 .contenedor p{
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 1.5em;
+}
+.sesion1 .contenedor h2{
+    font-family: 'Amiri', serif;
+    font-size: 3.2em;
+    font-weight: 200;
+    line-height: 1;
+    padding: 0.5em 0;
+}
+.sesion1 .contenedor h4{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 0.9em;
+    line-height: 2;
+    margin-bottom: 2em;
+}
+.sesion1 .contenedor a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Amiri', serif;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.sesion1 .contenedor a:hover{border-bottom: solid 1px #fff;}
+
+.sesion1 .contenedor .cuadro1{
+    grid-area: cuadro1;
+    padding: 2em 2em;
+}
+
+.sesion1 .contenedor .cuadro2{
+    grid-area: cuadro2;
+    padding: 0 2em;
+    background: url('../img/single-img.jpg');
+    background-size: cover;
+}
+
+.sesion1 .contenedor .cuadro3{
+    grid-area: cuadro3;
+    padding: 2em 2em;
+}
+
+/* pallarax1 */
+.pallarax1{
+    background: url('../img/parallax-1.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 70vh;
+}
+
+
+/* sesion 2 */
+
+.sesion2{
+    width: 100%;
+    padding-bottom: 6em;
+}
+
+.sesion2 .container{
+    padding: 2em 6em;
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     grid-template-areas: "encabezado encabezado"
+     "texto img";
+}
+
+.sesion2 .container .encabezado{
+    grid-area: encabezado;
+    padding: 6em 6em 4em 6em;
+    text-align: center;
+}
+.sesion2 .container .encabezado h4{
+    font-family: 'Cormorant', serif;
+    font-style: italic;
+    font-size: 1.4em;
+    font-weight: 400;
+}
+.sesion2 .container .encabezado h2{
+    font-family: 'Amiri', serif;
+    font-size: 3.5em;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.sesion2 .container .encabezado p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    line-height: 2;
+}
+
+.sesion2 .container .texto{
+    grid-area: texto;
+    padding: 3em 6em 0em 3em;
+}
+.sesion2 .container .texto .titulo{
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1px #fff;
+}
+.sesion2 .container .texto h2{
+    font-family: 'Amiri', serif;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.sesion2 .container .texto p{
+    font-size: 0.9em;
+    font-weight: 400;
+    padding-bottom: 3em;
+}
+.sesion2 .container .texto .boton1{
+    display: flex;
+    justify-content: center;
+}
+.sesion2 .container .texto .boton{
+    font-size: 1.2em;
+    font-weight: 700;
+    font-family: 'Cormorant', serif;
+    text-decoration: none;
+    color: #fff;
+    border: solid 1px #fff;
+    padding: 0.5em 2em;
+    margin-bottom: 4em;
+}
+.sesion2 .container .texto .boton:hover{
+    background: #fff;
+    color: #555;
+    transition: 500ms;
+}
+
+.sesion2 .container .imagen{
+    grid-area: img;
+    background: url('../img/single-img-2.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+
+/* sesion 3 */
+
+.sesion3{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "p1 map p2";
+}
+
+.sesion3 h2{
+    font-family: 'Cormorant', serif;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.sesion3 a{
+    padding-top: 1em;
+    font-family: 'Cormorant', serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+.sesion3 a:hover{
+    border-bottom: solid 1px #fff;
+}
+
+.sesion3 .cuadro1{
+    grid-area: p1;
+    padding: 4em;
+    background: url('../img/single-img-3.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sesion3 .cuadro2{
+    grid-area: map;
+    padding: 4em;
+    background: url('../img/Map-img.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sesion3 .cuadro3{
+    grid-area: p2;
+    padding: 4em;
+    background: url('../img/single-img-4.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* footerr */
+footer{
+    padding: 8em 4em;
+    width: 100%;
+    display: grid;
+    grid-gap: 4em;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: "c1 c2 c3 c4";
+}
+footer h2{
+    font-family: 'Cormorant', serif;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+}
+footer p{
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+footer a:hover{
+    color: #aaa;
+    transition: 500ms;
+
+}
+footer i{
+    margin-right: 0.5em;
+}
+footer .cuadro4 i{
+    font-size: 2em;
+    padding: 0.5em;
+}
+footer i:hover{
+    color: #aaa;
+    transition: 500ms;
+}
+
+footer .cuadro1{
+    grid-area: c1;
+}
+footer .cuadro2{
+    grid-area: c2;
+}
+footer .cuadro3{
+    grid-area: c3;
+}
+footer .cuadro2 p{
+    padding: 0.5em 0;
+}
+footer .cuadro4{
+    grid-area: c4;
+}
+
+/******** ABOUT *********/
+.about .header .img-header{
+    background: url(../img/about-title-img.jpg);
+    background-size: cover;
+    background-position: center right;
+    height:72vh;
+}
+
+.about .header .img-header .contenedor .titulo{
+    font-size: 4em;
+}
+
+/*sesion1*/
+.about .sesion1{
+    width: 100%;
+    padding: 10em 5em;
+}
+
+.about .sesion1 .container{
+    display: grid;
+    grid-gap: 4em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "img text";
+}
+.about .sesion1 .container h5{
+    font-family: 'Amiri', serif;
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.about .sesion1 .container h2{
+    font-family: 'Cormorant', serif;
+    font-size: 3.5em;
+    font-weight: 600;
+    line-height: 1;
+}
+.about .sesion1 .container p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.98em;
+    line-height: 2;
+}
+.about .sesion1 .container a{
+    font-family: 'Cormorant', serif;
+    text-decoration: none;
+    color: #fff;
+    border: solid 1px #fff;
+    padding: 0.8em 2em
+}
+
+.about .sesion1 .container .cuadro1{
+    grid-area: img;
+    background: url('../img/about-img-1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.about .sesion1 .container .cuadro2{
+    grid-area: text;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 6em 3em;
+}
+
+/*video img **/
+
+.about .vid{
+    width: 100%;
+    height: 70vh;
+    background: url('../img/video-img.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .vid i{
+    font-size: 2em;
+    border: solid 1px #fff;
+    border-radius: 50%;
+    padding: 2em;
+}
+.about .vid i:hover{background: #fff;color: #000;transition: 500ms;}
+
+/*******************MENU************/
+.menu .header .img-header{
+    background: url(../img/menu-title-img.jpg);
+    background-size: auto;
+    background-position: center center;
+    height:72vh;
+}
+
+.menu .pallarax1{
+    background: url(../img/menu-img-1.jpg);
+    background-attachment: fixed;
+    background-size: auto;
+    background-position: center center;
+    height: 60vh;
+}
+
+.menu .sesion2 .container{
+    padding-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "t1 t1"
+    "c1 c1-2"
+    "t2 t2"
+    "c2 c2-2"
+    "t3 t3"
+    "c3 c3-2";
+}
+
+.menu .sesion2 .container .t1{
+    grid-area: t1;
+    text-align: center;
+}
+
+.menu .sesion2 .container .t2{
+    grid-area: t2;
+    text-align: center;
+}
+
+.menu .sesion2 .container .t3{
+    grid-area: t3;
+    text-align: center;
+}
+
+.menu .sesion2 .container .titulop{
+padding-top: 4em;  
+}
+.menu .sesion2 .container .titulop h4{
+    font-family: 'Amiri', serif;
+    font-style: italic;
+    font-size: 1.3em;
+    font-weight: 200;
+}
+.menu .sesion2 .container .titulop h2{
+    font-family: 'Cormorant', serif;
+    font-size: 3em;
+}
+
+/******************Reservacion************/
+.reservacion .header .img-header{
+    background: url(../img/reservations-img.jpg);
+    height: 100vh;
+}
+
+.reservacion .header .img-header .contenedor{
+    height: 100vh;
+}
+
+.reservacion .reserva .form-reserva .reservar{
+    background: rgba(0, 0, 0, 0);
+}
+.reservacion .reserva .form-reserva .reservar:hover{
+    background: #fff;
+}
+
+.reservacion .reserva .form-reserva .icon{
+    background: rgba(0, 0, 0, 0);
+    border: solid 1px #aaa;
+    padding: 1em 1.5em;
+}
+
+
+/***********Contacto***************/
+.contacto .header .img-header{
+    background: url(../img/contact-title-img.jpg);
+    height: 70vh;
+}
+
+.contacto .imagen{
+    background: url('../img/Inner-map.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto .contactod{
+    width: 100%;
+}
+
+.contacto .contactod .container{
+    padding: 10em 4em;
+    display: grid;
+    grid-gap: 10em;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "text form";
+}
+
+.contacto .contactod .container .cuadro1{
+    grid-area: text;
+}
+.contacto .contactod .container .cuadro1 h4{
+    font-family: 'Amiri', serif;
+    font-style: italic;
+    font-size: 1.3em;
+    font-weight: 100;
+}
+.contacto .contactod .container .cuadro1 h2{
+    font-family: 'Cormorant', serif;
+    font-size: 3em;
+    font-weight: 100;
+    padding-bottom: 0.8em;
+}
+.contacto .contactod .container .cuadro1 p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+    line-height: 2;
+}
+
+.contacto .contactod .container .cuadro2{
+    grid-area: form;
+}
+
+.contacto .contactod .container form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.contacto .contactod .container form textarea{
+    font-family: 'Montserrat', sans-serif;
+    
+    font-weight: 300;
+    width: 100%;
+    font-size: 1.1em;
+    background: #000;
+    color: #fff;
+    border: solid 1px rgb(255, 255, 255);
+    resize: none;
+    
+    padding: 1em 0.5em;
+}
+
+.contacto .contactod .container form input{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    font-size: 1.1em;
+    background: #000;
+    color: #fff;
+    border: solid 1px #666;
+    margin: 0.8em 0;
+    padding: 1em 0.5em;
+    font-weight: 300;
+}
+
+.contacto .contactod .container form button{
+    font-family: 'Cormorant', serif;
+    background: #000;
+    color: #fff;
+    border: solid 1px #fff;
+    font-size: 1.1em;
+    padding: 0.5em 2em;
+    font-weight: 500;
+}
+
+.contacto .contactod .container form button:hover{
+    background: #fff;
+    color: #555;
+    
+    font-weight: 700;
+    transition: 500ms;
+}

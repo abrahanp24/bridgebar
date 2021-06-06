@@ -1,0 +1,138 @@
+@media only screen and (max-width:620px) {
+    
+    /*******portada********/
+
+    .header .img-header{
+        height:80vh;
+    }
+
+    .header .img-header .contenedor .subtitulo{
+        margin-bottom: 0em;
+    }
+    
+    .header .img-header .contenedor .titulo{
+        font-size: 3.2em;
+        margin-bottom: 1em;
+    }
+    
+    .header .img-header .contenedor .boton a{
+        font-size: 1.3em;
+    }
+
+    /*****reserva tabla******/
+    .reserva{
+        padding: 6em 2em;
+    }
+    .reserva .form-reserva{
+         display: flex;
+         flex-direction: column;
+    }
+    
+    .reserva .form-reserva .reservar{
+        width: 60%;
+    }
+
+
+    /*******sesion1*******/
+    .sesion1 .contenedor{
+        padding: 2em 0em;
+    }
+    .sesion1 .contenedor h2{
+        font-size: 2.3em;
+    }
+
+
+    /**********sesion2**********/
+    .sesion2 .container{
+        padding: 2em 0em;
+    }
+
+    .sesion2 .container .encabezado{
+        grid-area: encabezado;
+        padding: 6em 2em 6em 2em;
+        text-align: center;
+    }
+
+    .sesion2 .container .encabezado h2{
+        padding: 0.5em 0em;
+        font-size: 2.5em;
+        line-height: 1;
+    }
+
+    .sesion2 .container .texto{
+        grid-area: texto;
+        padding: 0em 2em 0em 2em;
+    }
+
+    .sesion2 .container .imagen{
+        grid-area: img;
+        background: url('../img/single-img-2.jpg');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+    /**********sesion3*******/
+    
+    .sesion3 .cuadro1{
+        height: 45vh;
+    }
+    .sesion3 .cuadro2{
+        height: 35vh;
+    }
+    .sesion3 .cuadro3{
+        height: 45vh;
+    }
+
+    /*********footer******/
+    footer{
+        padding: 8em 4em;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "c1 c1"
+        "c2 c2"
+        "c3 c3"
+        "c4 c4";
+    }
+
+    /****************************about*****/
+    .about .header .img-header{
+        height: 40vh;
+    }
+
+    .about .header .img-header .contenedor{
+        height: 45vh;
+    }
+
+    .about .sesion1 .container .cuadro2{
+        padding: 6em 0em;
+    }
+    
+
+    .about .vid{
+        background-position: center;
+    }
+
+
+
+
+    .contacto .header .img-header{
+        background: url(../img/contact-title-img.jpg);
+        background-size: cover;
+        height: 30vh;
+    }
+
+    .contacto .header .img-header .titulo{
+        font-size: 2.5em;
+    }
+    .contacto .header .img-header .contenedor{
+        height: 40vh;
+    }
+    .contacto .contactod .container{
+        padding: 5em 2em;
+        display: grid;
+        grid-gap: 5em;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "text text"
+        "form form";
+    }
+
+}

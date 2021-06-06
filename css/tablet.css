@@ -1,0 +1,245 @@
+@media only screen and (max-width:1216px) {
+    .header .nav{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "logo logo"
+        "list list";
+        padding: 0;
+        grid-gap: 0em;
+    }
+
+    .header .nav .logo{
+        grid-area: logo;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2em 2em;
+    }
+    .header .nav .logo .btn-menu{display: block;}
+
+    .header .nav .list ul{flex-direction: column;}
+    .header .nav .list li{padding: 1.5em;display: flex; justify-content: center;}
+
+    .header .nav .boton{
+        justify-content: center;
+    }
+
+    .nav .list{
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 110px);
+        background: #000;
+        border-top: 3px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header .nav .boton{
+        display: none;
+    }
+
+    .header .img-header{
+        height:70vh;
+    }
+
+    .header .img-header .contenedor .subtitulo{
+        margin-bottom: 0em;
+    }
+    
+    .header .img-header .contenedor .titulo{
+        font-size: 6em;
+        margin-bottom: 1em;
+    }
+    
+    .header .img-header .contenedor .boton a{
+        font-size: 1.3em;
+    }
+
+    /****reserva tabla***/
+    .reserva{
+        padding: 6em 2em;
+    }
+    .reserva .form-reserva{
+        grid-gap: 2em;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "personas fecha"
+        "hora reservar";
+    }
+
+
+    /******sesion1**********/
+
+    .sesion1{
+        width: 100%;
+        padding-bottom: 3em;
+    }
+    .sesion1 .contenedor{
+        padding: 4em 2em;
+        text-align: center;
+        display: grid;
+        grid-gap: 3em;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "cuadro1 cuadro1"
+        "cuadro2 cuadro2"
+        "cuadro3 cuadro3";
+    }
+    .sesion1 .contenedor .cuadro2{
+        height: 90vh;
+    }
+
+
+    /***********sesion2***********/
+    .sesion2 .container{
+        padding: 2em 2em;
+         display: grid;
+         grid-template-columns: repeat(2,1fr);
+         grid-template-areas: "encabezado encabezado"
+         "texto texto"
+         "img img";
+    }
+
+    .sesion2 .container .encabezado{
+        grid-area: encabezado;
+        padding: 6em 0em;
+        text-align: center;
+    }
+
+    .sesion2 .container .imagen{
+        height: 60vh;
+    }
+
+    /**********sesion 3**********/
+    .sesion3{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "p1 p1"
+        "map map"
+        "p2 p2";
+    }
+    .sesion3 .cuadro1{
+        height: 60vh;
+    }
+    .sesion3 .cuadro2{
+        height: 50vh;
+    }
+    .sesion3 .cuadro3{
+        height: 60vh;
+    }
+
+    /*********footer******/
+    footer{
+        padding: 8em 6em;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "c1 c1"
+        "c2 c2"
+        "c3 c3"
+        "c4 c4";
+    }
+
+    
+    /****************************about*****/
+    .about .header .img-header{
+        background: url(../img/about-title-img.jpg);
+        background-size: cover;
+        background-position: center center;
+        height:60vh;
+    }
+
+    /**sesion1***/
+    .about .sesion1{
+        width: 100%;
+        padding: 10em 2em;
+    }
+
+    .about .sesion1 .container{
+        display: grid;
+        grid-gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "img img"
+        "text text";
+    }
+
+    .about .sesion1 .container .cuadro1{
+        height: 60vh;
+        grid-area: img;
+        background: url('../img/about-img-1.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .about .sesion1 .container .cuadro2{
+        padding: 3em 3em;
+    }
+
+    /*video img **/
+
+    .about .vid{
+        width: 100%;
+        height: 70vh;
+        background: url('../img/video-img.jpg');
+        background-size: cover;
+        background-position: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /*******************MENU************/
+    .menu .header .img-header{
+        height:40vh;
+    }
+    .menu .header .img-header .contenedor{
+        height: 45vh;
+    }
+
+    .menu .sesion2 .container{
+        padding-top: 5em;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /******************Reservacion************/
+    .reservacion .header .img-header{
+        background: url(../img/reservations-img.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+
+    .reservacion .header .img-header .contenedor .reserva{
+        padding: 2em 0;
+        width: 100%;
+    }
+
+    .reservacion .header .img-header .contenedor .reserva .form-reserva{
+        width: 100%;
+    }
+
+    /***********Contacto***************/
+    .contacto .header .img-header{
+        background: url(../img/contact-title-img.jpg);
+        background-size: cover;
+        height: 50vh;
+    }
+
+    .contacto .header .img-header .titulo{
+        font-size: 4em;
+    }
+    .contacto .header .img-header .contenedor{
+        height: 55vh;
+    }
+
+    .contacto .contactod .container{
+        padding: 5em 4em;
+        display: grid;
+        grid-gap: 5em;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "text text"
+        "form form";
+    }
+
+}
